@@ -19,7 +19,7 @@
     <a class="button button-icon icon ion-ios-more" ng-click="vm.doFilterOrder($event)"></a>
 
   </div>
-  <ion-content>
+  <ion-content on-swipe-right="vm.onSwipeRight()">
     <div class="spinner">
       <ion-spinner
           class="spinner"

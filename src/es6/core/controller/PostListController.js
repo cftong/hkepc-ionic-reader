@@ -507,4 +507,13 @@ export class PostListController {
       return dateStr
     }
   }
+
+  onSwipeRight(){
+    this.currentPageNum = this.slidePages[this.currentIndex].num
+
+    if(this.currentPageNum == 1) {
+      this.ionicHistory.goBack()
+    }
+
+  }
 }

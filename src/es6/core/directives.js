@@ -10,11 +10,11 @@ angular.module('starter.directives', [])
   return (scope, element, attrs) => {
     scope.$watch(
         (scope) => {
-          return scope.$eval(attrs.compile);
+          return scope.$eval(attrs.compile)
         },
         (value) => {
           element.html(value);
-          $compile(element.contents())(scope);
+          $compile(element.contents())(scope)
         }
-    )};
+    )}
 }])

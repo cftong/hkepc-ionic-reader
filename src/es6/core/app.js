@@ -28,7 +28,9 @@ angular.module('starter', [
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false)
+      if(typeof cordova.plugins.Keyboard.hideKeyboardAccessoryBar == 'function'){
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false)
+      }
       cordova.plugins.Keyboard.disableScroll(true)
 
     }

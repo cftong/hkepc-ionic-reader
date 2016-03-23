@@ -50,7 +50,7 @@ export class MessageResolver {
 
           // extract the ads before remove from the parent
           const hasAds = adsSource.has('iframe')
-          const ads = hasAds && !ionic.Platform.isIOS() && !ionic.Platform.isAndroid() ? adsSource.html() : undefined
+          const ads = hasAds && !ionic.Platform.isIOS() && !ionic.Platform.isAndroid() && !ionic.Platform.isWindowsPhone() ? adsSource.html() : undefined
 
           // really remove the ads
           adsSource.remove()
